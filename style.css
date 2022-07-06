@@ -1,0 +1,29 @@
+#sal:active
+{ 
+color: blue; 
+background-color: red; 
+}
+#sal:hover{ 
+    color: white; 
+    background-color: #d29bfd;
+}
+h1{ 
+text-align: center;
+color: #d29bfd; }
+
+h2{ 
+color: #d29bfd;}
+
+table {
+      margin: 25px 0;
+      width: 200px;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    table, th, td {
+      border: 2px solid;
+    }
