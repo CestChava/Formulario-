@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Formulario</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="JS,CSS,HTML">
+<meta name="Author" content="Salvador">
+
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+
+</head>
+<body>
+
+<h1>Formulario</h1>
+<section>
+<h2>Tablas</h2>
+
+<b>Tabla</b>
+
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Apellidos</th>
+<th>Edad</th>
+<th>Matrícula</th>
+<th>Teléfono</th>
+<th>Materia</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+<hr>
+<h2>Insertar</h2>
+<!--<form action="/action_page.php"
+      method="get">-->
+<!--<form>-->
+<label for="Nombre">Nombre</label>
+<input type="text" id="Nombre">
+<br><br>
+<label for="Apellidos">Apellidos</label>
+<input type="text" id="Apellidos">
+<br><br>
+<label for="Edad">Edad</label>
+<input type="text" id="Edad">
+<br><br>
+<label for="Matricula">Matrícula</label>
+<input type="text" id="Matricula">
+<br><br>
+<label for="Telefono">Teléfono</label>
+<input type="text" id="Telefono">
+<br><br>
+<label for="mat">Materia</label>
+<select name="mat" id="mat">
+<option value="Quimica">Quimica</option>
+<option value="Ciencias">Ciencias</option>
+<option value="Historia">Historia</option>
+</select>
+<br>
+<br>
+<button id="sal" onclick="actualizar();">Actualizar</button>
+<!--</form>-->
+<!--<input id="sal" type="submit" value="Actualizar" onclick="hola();">-->
+<!--<button id="sal">oprimir</button>-->
+<br>
+</section>
+
+<br>
+
+<script>
+function actualizar () {
+var x = document.getElementById("Nombre").value;
+var z = document.getElementById("Apellidos").value;
+var c = document.getElementById("Edad").value;
+var v = document.getElementById("Matricula").value;
+var b = document.getElementById("Telefono").value;
+var y = document.getElementById("mat").value;
+if (x == "") {
+    alert("Name must be filled out");
+    
+  }
+  else{
+   alert("The database has been Updated");
+   markup = 
+   "<tr><td>" + x + "</td><td>"+ z +"</td><td>"+ c +"</td><td>"+ v +"</td><td>"+ b +"</td><td>"+ y +"</td></tr>";
+        tableBody = $("table tbody");
+        tableBody.append(markup);
+   }
+}
+</script>
+
+
+</body>
+</html>
